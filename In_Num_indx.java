@@ -13,19 +13,27 @@ public static void main(String[] args){
     System.out.println("Enter element: ");
     int y=sc.nextInt();
 
+    System.out.println(x);
+    System.out.println(y);
+    
     int[] arr1=new int[n+1];
+    int j=0;
 
-    for(int i=0; i<=arr1.length; i++ ){
+    for(int i=0; i<arr1.length; i++ ){
 
-    if(x<i){
-        
+    if(i==x){
+        arr1[i]=y;
     }
+    else{
+        arr1[i]=arr[j];
+        j++;
     }
 
-
-
-
-
-
+    }
+    System.out.println(" Array after insertion: ");
+    for(int i=0; i<arr1.length; i++){
+        System.out.print(arr1[i]+" ");
+    }
+    sc.close();
 }
 }
